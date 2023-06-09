@@ -1,0 +1,21 @@
+/* BASIC */
+/* MOBILE */
+/* DESKTOP */
+
+/* ------------------- BASIC ----------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+
+}
+
+.grid-container-header {
+    display: grid;
+    grid-template-areas: 'producten ruimte nieuw aanbiedingen';
+    gap: 10px;
+}
