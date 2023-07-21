@@ -28,7 +28,8 @@
 
 .grid-container {
     margin-left: 5vw;
-    margin-right: 10vw;
+    width: 1440px;
+    height: 1080px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 10% 90%;
     grid-template-areas: 
@@ -58,12 +59,15 @@
     grid-area:nav-item;
     padding: 2px;
     font-size: 18px;
+
 }
 
 .search-item {
     grid-area: search;
     padding: 2px;
     font-size: 18px;
+    align-self: center;
+    justify-self: end;
 }
 
 .main {
@@ -71,107 +75,135 @@
     grid-area: main;
     background-color: white;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: 22% 25% 31% 22%;
     grid-template-areas: 
-        "image1 bronden image3 image3"
-        "image2 image2 image3 image3"
-        "image2 image2 soort acquisition"
+        "img1 bronden img3 img3"
+        "img2 img2 img3 img3"
+        "img2 img2 soort acquisition"
         "description description information arrow";
 }
 
-.image1 {
+.img1 {
     grid-area: 1 / 1 / 2 / 2;
-    width: 100%;
-    height: 100%;
+    width: 360px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.image1 {
+    object-fit: fill;
+    zoom: 35.7%;
+    object-position: 0px 0px;
 }
 
 .bronden {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-.image2 {
+.img2 {
     grid-area: 2 / 1 / 4 / 3;
-    width: 100%;
-    height: 100%;
+    width: 720px;
+    height: 530px;
+    overflow: hidden;
+}
+
+.image2 {
+    object-fit: cover;
+    zoom: 81%;
+    object-position: 0px -135px;
 }
 
 .description {
     grid-area: 4 / 1 / 5 / 2;
 }
 
-.image3 {
+.img3 {
     grid-area: 1 / 3 / 3 / 5;
-    width: 100%;
-    height: 100%;
+    width: 720px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.image3 {  
+    object-fit: cover;
+    zoom: 90%;
+    object-position: 0px 0px;
 }
 
 .soort {
     grid-area: 3 / 3 / 4 / 4;
     display: grid;
-    grid-template-columns: 30% 30% 30% 10%;
+    grid-template-columns: 100%;
     grid-template-rows: 10% 40% 10% 40%;
     grid-template-areas: 
-        "kleur-item kleur-item kleur-item ."
-        "option1 option2 option3 ."
-        "afmeting-item afmeting-item afmeting-item ."
-        "afmeting-option1 afmeting-option2 afmeting-option3 .";
+        "kleur-item"
+        "options"
+        "afmeting-item"
+        "afmetingen";
+    margin-left: 5px;
 }
-
-.information {
-    grid-area: 4 / 3 / 5 / 4;
-}
-
-.arrow {
-    grid-area: 4 / 4 / 5 / 5;
-    width: 10%;
-    height: 10%;
-}
-
 
 .kleur-item {
-    grid-area: 1 / 1 / 2 / 4;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.options {
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .option1 {
-    grid-area: 2 / 1 / 3 / 2;
-    width: 100%;
+    width: 30%;
     height: 100%;
+    border: solid 1px var(--color3);
+    border-radius: 15px;
 }
 
 .option2 {
-    grid-area: 2 / 2 / 3 / 3;
-    width: 100%;
+    width: 30%;
     height: 100%;
+    border: solid 1px var(--color3);
+    border-radius: 15px;
 }
 
 .option3 {
-    grid-area: 2 / 3 / 3 / 4;
-    width: 100%;
+    width: 30%;
     height: 100%;
+    border: solid 1px var(--color3);
+    border-radius: 15px;
 }
 
 .afmeting-item {
-    grid-area: 3 / 1 / 4 / 4;
-    width: 100%;
-    height: 100%;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.afmetingen {
+    grid-area: 4 / 1 / 5 / 2;
+    display: grid;
+    grid-template-columns: 30% 30% 30% 10%;
+    grid-template-rows: 100%;
 }
 
 .afmeting-option1 {
-    grid-area: 4 / 1 / 5 / 2;
-    width: 100%;
-    height: 100%;
+    grid-area: 1 / 1 / 2 / 2;
+    width: 95%;
+    height: 20%;
+    border: solid 1px var(--color3);
+    border-radius: 5px;
 }
 
 .afmeting-option2 {
-    grid-area: 4 / 2 / 5 / 3;
-    width: 100%;
-    height: 100%;
+    grid-area: 1 / 2 / 2 / 3;
+    width: 95%;
+    height: 20%;
+    border: solid 1px var(--color3);
+    border-radius: 5px;
 }
 
 .afmeting-option3 {
-    grid-area: 4 / 3 / 5 / 4;
-    width: 100%;
-    height: 100%;
+    grid-area: 1 / 3 / 2 / 4;
+    width: 95%;
+    height: 20%;
+    border: solid 1px var(--color3);
+    border-radius: 5px;
 }
 
 .acquisition {
@@ -200,6 +232,29 @@
     height: 10%;
 }
 
+.product {
+    grid-area: 4 / 3 / 5 / 5;
+    height: 80px;
+    border: solid 1px var(--color3);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100%;
+}
+
+.information {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: center;
+    margin-left: 15px;
+}
+
+.arrow {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: end;
+}
 
 
 /* ------------------- MOBILE ----------------------- */
