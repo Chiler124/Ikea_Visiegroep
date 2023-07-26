@@ -7,10 +7,9 @@
     <title>Ikea test</title>
 
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-        
-    </style> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -18,13 +17,15 @@
 
         <div class="header">
             <div class="nav">
-                <div class="header-item">Producten</div>
-                <div class="header-item">Ruimte</div>
-                <div class="header-item">Nieuw</div>
-                <div class="header-item">Aanbiedingen</div>
+                <div class="header-item1">Producten</div>
+                <div class="header-item2">Ruimte</div>
+                <div class="header-item3">Nieuw</div>
+                <div class="header-item4">Aanbiedingen</div>
             </div>
            
-            <div class="search-item">Waar ben je naar op bezoek?</div>
+            <div class="search">
+                <input type="text" class="search-input" placeholder="Waar ben je naar op zoek?">
+            </div>
         </div>
 
         <div class="main">
@@ -34,7 +35,7 @@
 
             <div class="bronden">
                 <div class="title-item">Brönden</div>
-                <div class="description-title-item">Vloerkleed, laagpolig, handgemaakt veelkleurig/rood, 200x300cm</div> 
+                <div class="description-title-item">Vloerkleed, laagpolig, handgemaakt veelkleurig/rood, <u>200x300cm</u></div> 
                 <div class="price">€399,-</div>
             </div>
 
@@ -74,15 +75,15 @@
                 <div class="acquisition-possibilities">
                     <img class="delivery" src="./images/delivery.svg" alt="truck">
                     <div class="levering">Levering</div>
-                    <div class="levering-descprition">Beschikbaar voor 7521AN</div>
+                    <div class="levering-descprition">Beschikbaar voor <u>7521AN</u></div>
                     
                     <img class="collect" src="./images/click-collect.svg" alt="collect">
                     <div class="ophalen">Bestellen & ophalen</div>
-                    <div class="ophalen-description">Verkrijgbaar bij IKEA Hengelo</div> 
+                    <div class="ophalen-description">Verkrijgbaar bij IKEA <u>Hengelo</u></div> 
                         
                     <img class="store" src="./images/store-icon.svg" alt="store">
                     <div class="winkel">In de winkel</div>
-                    <div class="wnnkel-description">Op voorraad in Hengelo</div>
+                    <div class="winkel-description">Op voorraad in <u>Hengelo</u></div>
                 </div>
                 
                 <button class="button1">Voeg toe aan winkelwagen</button>

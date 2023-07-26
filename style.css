@@ -31,51 +31,106 @@
     width: 1440px;
     height: 1080px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 8% 92%;
     grid-template-areas: 
-        /* "header header header header"
-        "image1 bronden image3 image3"
-        "image2 image2 image3 image3"
-        "image2 image2 soort acquisition"
-        "description description information information"; */
         "header header"
-        "main main";    
+        "main main";
+    font-size: 18px;    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .header {
     display: grid;
     grid-area: header;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 32% 18%;
     grid-template-rows: 100%;
-    background-color: var(--color2);
     grid-template-areas: "nav . . search";
 }
 
 .nav {
+    display: grid;
     grid-area: nav;
+    grid-template-columns: 35% 25% 25% 15%;
+    grid-template-rows: 100%;
+    margin-top: 3vh;
 }
 
-.header-item {
-    grid-area:nav-item;
+.header-item1 {
+    grid-area: 1 / 1 / 2 / 2;
     padding: 2px;
-    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-item2 {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 2px;
+    font-weight: 700;
 
 }
 
-.search-item {
+.header-item3 {
+    grid-area: 1 / 3 / 2 / 4;
+    padding: 2px;
+    font-weight: 700;
+
+}
+
+.header-item4 {
+    grid-area: 1 / 4 / 2 / 5;
+    padding: 2px;
+    font-weight: 700;
+
+}
+
+.header-item1:hover {
+    cursor: pointer;
+}
+
+.header-item2:hover {
+    cursor: pointer;
+}
+
+.header-item3:hover {
+    cursor: pointer;
+}
+
+.header-item4:hover {
+    cursor: pointer;
+}
+
+.search { 
     grid-area: search;
-    padding: 2px;
-    font-size: 18px;
+    border: solid 3px var(--color1);
+    font-size: 14px;
     align-self: center;
-    justify-self: end;
+    background: url(./images/search-icon.svg) no-repeat scroll 13vw 2px;
+    background-color: var(--color2);
 }
+
+.search-input {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.search-input:focus {
+    outline: none;
+    padding: 10px 30px 10px 10px;
+    background-color: var(--color3);
+}
+/* 
+.search-icon {
+    height: 20%;
+    width: 20%;
+} */
 
 .main {
     display: grid;
     grid-area: main;
     background-color: white;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 22% 25% 31% 22%;
+    grid-template-rows: 21% 25% 28% 26%;
     grid-template-areas: 
         "img1 bronden img3 img3"
         "img2 img2 img3 img3"
@@ -98,6 +153,24 @@
 
 .bronden {
     grid-area: 1 / 2 / 2 / 3;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.title-item {
+    margin-bottom: 2vh;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.description-title-item {
+    font-size: 14px;
+    margin-bottom: 2vh;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 32px;
 }
 
 .img2 {
@@ -114,7 +187,9 @@
 }
 
 .description {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 4 / 1 / 5 / 3;
+    font-size: 16px;
+    padding-top: 15px;
 }
 
 .img3 {
@@ -134,45 +209,65 @@
     grid-area: 3 / 3 / 4 / 4;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 40% 10% 40%;
+    grid-template-rows: 10% 30% 20% 30%;
     grid-template-areas: 
         "kleur-item"
         "options"
         "afmeting-item"
         "afmetingen";
-    margin-left: 5px;
+    margin-left: 1vw;
 }
 
 .kleur-item {
     grid-area: 1 / 1 / 2 / 2;
+    font-weight: 700;
 }
 .options {
     grid-area: 2 / 1 / 3 / 2;
+    margin-bottom: 2vh;
 }
 
 .option1 {
-    width: 30%;
+    width: 20%;
     height: 100%;
     border: solid 1px var(--color3);
-    border-radius: 15px;
+    border-radius: 5px;
+}
+
+.option1:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
 }
 
 .option2 {
-    width: 30%;
+    width: 20%;
     height: 100%;
     border: solid 1px var(--color3);
-    border-radius: 15px;
+    border-radius: 5px;
+}
+
+.option2:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
 }
 
 .option3 {
-    width: 30%;
+    width: 20%;
     height: 100%;
     border: solid 1px var(--color3);
-    border-radius: 15px;
+    border-radius: 5px;
+}
+
+.option3:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
 }
 
 .afmeting-item {
     grid-area: 3 / 1 / 4 / 2;
+    border-top: solid 1px var(--color3);
+    padding-top: 2vh;
+    font-weight: 700;
 }
 
 .afmetingen {
@@ -180,72 +275,147 @@
     display: grid;
     grid-template-columns: 30% 30% 30% 10%;
     grid-template-rows: 100%;
+    font-size: 14px;
+    text-decoration: underline;
 }
 
 .afmeting-option1 {
     grid-area: 1 / 1 / 2 / 2;
     width: 95%;
-    height: 20%;
+    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
+    padding: 2px;
+}
+
+.afmeting-option1:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
 }
 
 .afmeting-option2 {
     grid-area: 1 / 2 / 2 / 3;
     width: 95%;
-    height: 20%;
+    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
+    padding: 2px;
 }
+
+.afmeting-option2:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
+}
+
 
 .afmeting-option3 {
     grid-area: 1 / 3 / 2 / 4;
     width: 95%;
-    height: 20%;
+    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
+    padding: 2px;
 }
+
+.afmeting-option3:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
+}
+
 
 .acquisition {
     grid-area: 3 / 4 / 4 / 5;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 60% 30%;
+    grid-template-rows: 10% 60% 5% 20%;
     grid-template-areas: 
         "acquisitionTitle"
         "acquisition-possibilities"
+        "."
         "button1";
 }
 
+.acquisitionTitle {
+    font-weight: 700;
+}
+
+.acquisition-possibilities {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 20% 10% 20% 10% 20%;
+    border: solid 1px var(--color3);
+    border-radius: 5px;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-size: 14px;
+}
+
 .delivery {
-    width: 10%;
-    height: 10%;
+    grid-area: 1 / 1 / 3 / 2;
+    width: 60%;
+    height: 60%;
+}
+
+.levering {
+    font-weight: 700;
 }
 
 .collect {
-    width: 10%;
-    height: 10%;
+    grid-area: 3 / 1 / 5 / 2;
+    width: 60%;
+    height: 60%;
+}
+
+.ophalen {
+    font-weight: 700;
 }
 
 .store {
-    width: 10%;
-    height: 10%;
+    grid-area: 5 / 1 / 7 / 2;
+    width: 60%;
+    height: 60%;
 }
+
+.winkel {
+    font-weight: 700;
+}
+
+.button1 {
+    font-size: 18px;
+    color: var(--color2);
+    background-color: var(--color6);
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.button1:hover {
+    cursor: pointer;
+}
+
 
 .product {
     grid-area: 4 / 3 / 5 / 5;
-    height: 80px;
-    border: solid 1px var(--color3);
-    border-radius: 15px;
+    height: 70px;
+    border-top: solid 1px var(--color3);
+    border-bottom: solid 1px var(--color3);
+    /* border-radius: 15px; */
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 100%;
+    margin-left: 1vw;
+}
+
+.product:hover {
+    cursor: pointer;
 }
 
 .information {
     grid-area: 1 / 1 / 2 / 2;
     align-self: center;
     margin-left: 15px;
+    font-size: 24px;
 }
 
 .arrow {
