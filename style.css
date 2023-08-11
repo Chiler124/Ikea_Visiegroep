@@ -20,7 +20,6 @@
 
 .grid-container {
     display: grid;
-    margin-left: 5vw;
     font-size: 18px;    
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -36,38 +35,6 @@
     grid-area: nav;
 }
 
-.main {
-    display: grid;
-    grid-area: main;
-    background-color: white;
-}
-
-/* ------------------- DESKTOP ----------------------- */
-@media screen and (min-width:1180px) {
-
-.grid-container {
-    width: 1440px;
-    height: 1080px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 8% 92%;
-    grid-template-areas: 
-        "header header"
-        "main main";
-    
-}
-
-.header {
-    grid-template-columns: 25% 25% 32% 18%;
-    grid-template-rows: 100%;
-    grid-template-areas: "nav . . search";
-}
-
-.nav {
-    grid-template-columns: 35% 25% 25% 15%;
-    grid-template-rows: 100%;
-    margin-top: 3vh;
-}
-
 .header-item1 {
     grid-area: 1 / 1 / 2 / 2;
     padding: 2px;
@@ -78,37 +45,18 @@
     grid-area: 1 / 2 / 2 / 3;
     padding: 2px;
     font-weight: 700;
-
 }
 
 .header-item3 {
     grid-area: 1 / 3 / 2 / 4;
     padding: 2px;
     font-weight: 700;
-
 }
 
 .header-item4 {
     grid-area: 1 / 4 / 2 / 5;
     padding: 2px;
     font-weight: 700;
-
-}
-
-.header-item1:hover {
-    cursor: pointer;
-}
-
-.header-item2:hover {
-    cursor: pointer;
-}
-
-.header-item3:hover {
-    cursor: pointer;
-}
-
-.header-item4:hover {
-    cursor: pointer;
 }
 
 .search { 
@@ -116,7 +64,7 @@
     border: solid 3px var(--color1);
     font-size: 14px;
     align-self: center;
-    background: url(./images/search-icon.svg) no-repeat scroll 13vw 2px;
+    background: url(./images/search-icon.svg) no-repeat scroll 11vw 2px;
     background-color: var(--color2);
 }
 
@@ -126,26 +74,14 @@
     background-color: transparent;
 }
 
-.search-input:focus {
-    outline: none;
-    padding: 10px 30px 10px 10px;
-    background-color: var(--color3);
-}
-
 .main {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 21% 25% 28% 26%;
-    grid-template-areas: 
-        "img1 bronden img3 img3"
-        "img2 img2 img3 img3"
-        "img2 img2 soort acquisition"
-        "description description information arrow";
+    display: grid;
+    grid-area: main;
+    background-color: white;
 }
 
 .img1 {
     grid-area: 1 / 1 / 2 / 2;
-    width: 360px;
-    height: 220px;
     overflow: hidden;
 }
 
@@ -156,7 +92,6 @@
 }
 
 .bronden {
-    grid-area: 1 / 2 / 2 / 3;
     margin-top: 1vh;
     margin-left: 1vw;
 }
@@ -168,32 +103,14 @@
 }
 
 .description-title-item {
-    font-size: 14px;
     margin-bottom: 2vh;
 }
 
-.price {
-    font-weight: 900;
-    font-size: 32px;
-}
-
-.img2 {
-    grid-area: 2 / 1 / 4 / 3;
-    width: 720px;
-    height: 530px;
-    overflow: hidden;
-}
 
 .image2 {
     object-fit: cover;
     zoom: 81%;
     object-position: 0px -135px;
-}
-
-.description {
-    grid-area: 4 / 1 / 5 / 3;
-    font-size: 16px;
-    padding-top: 15px;
 }
 
 .img3 {
@@ -209,11 +126,15 @@
     object-position: 0px 0px;
 }
 
+.price {
+    font-weight: 900;
+    font-size: 32px;
+}
+
 .soort {
-    grid-area: 3 / 3 / 4 / 4;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 30% 20% 30%;
+    grid-template-rows: 15% 32% 20% 35%;
     grid-template-areas: 
         "kleur-item"
         "options"
@@ -287,55 +208,29 @@
 .afmeting-option1 {
     grid-area: 1 / 1 / 2 / 2;
     width: 95%;
-    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
     padding: 2px;
-}
-
-.afmeting-option1:hover {
-    cursor: pointer;
-    border: solid 1px var(--color1);
 }
 
 .afmeting-option2 {
     grid-area: 1 / 2 / 2 / 3;
     width: 95%;
-    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
     padding: 2px;
-}
-
-.afmeting-option2:hover {
-    cursor: pointer;
-    border: solid 1px var(--color1);
 }
 
 .afmeting-option3 {
     grid-area: 1 / 3 / 2 / 4;
     width: 95%;
-    height: 30%;
     border: solid 1px var(--color3);
     border-radius: 5px;
     padding: 2px;
 }
 
-.afmeting-option3:hover {
-    cursor: pointer;
-    border: solid 1px var(--color1);
-}
-
-.acquisition {
-    grid-area: 3 / 4 / 4 / 5;
+.acquisition { 
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 60% 5% 20%;
-    grid-template-areas: 
-        "acquisitionTitle"
-        "acquisition-possibilities"
-        "."
-        "button1";
 }
 
 .acquisitionTitle {
@@ -389,12 +284,7 @@
     background-color: var(--color6);
     border: none;
     border-radius: 10px;
-    width: 80%;
     grid-area: 4 / 1 / 5 / 2;
-}
-
-.button1:hover {
-    cursor: pointer;
 }
 
 .product {
@@ -428,15 +318,171 @@
     justify-self: end;
 }
 
+/* ------------------- DESKTOP ----------------------- */
+@media screen and (min-width:1180px) {
+
+.grid-container {
+    width: 1440px;
+    height: 1080px;
+    margin-left: 5vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 8% 92%;
+    grid-template-areas: 
+        "header header"
+        "main main";
+}
+
+.header {
+    grid-template-columns: 25% 25% 32% 18%;
+    grid-template-rows: 100%;
+    grid-template-areas: "nav . . search";
+}
+
+.nav {
+    grid-template-columns: 35% 25% 25% 15%;
+    grid-template-rows: 100%;
+    margin-top: 3vh;
+}
+
+.header-item1:hover {
+    cursor: pointer;
+}
+
+.header-item2:hover {
+    cursor: pointer;
+}
+
+.header-item3:hover {
+    cursor: pointer;
+}
+
+.header-item4:hover {
+    cursor: pointer;
+}
+
+.search-input:focus {
+    outline: none;
+    padding: 10px 30px 10px 10px;
+    background-color: var(--color3);
+}
+
+.main {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 21% 25% 28% 26%;
+    grid-template-areas: 
+        "img1 bronden img3 img3"
+        "img2 img2 img3 img3"
+        "img2 img2 soort acquisition"
+        "description description information arrow";
+}
+
+.img1 {
+    width: 360px;
+    height: 220px;
+}
+
+
+.img2 {
+    grid-area: 2 / 1 / 4 / 3;
+    width: 720px;
+    height: 530px;
+    overflow: hidden;
+}
+
+.bronden {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.description {
+    padding-top: 15px;
+    grid-area: 4 / 1 / 5 / 3;
+    font-size: 16px;
+}
+
+.description-title-item {
+    font-size: 14px;
+}
+
+.soort {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.kleur-item {
+    margin-top: 1vh;
+}
+
+.option1:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
+}
+
+.option2:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
+}
+
+.option3:hover {
+    cursor: pointer;
+    border: solid 2px var(--color1);
+}
+
+.afmeting-option1 {
+    height: 30%;
+}
+
+.afmeting-option1:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
+}
+
+.afmeting-option2 {
+    height: 30%;
+}
+
+.afmeting-option2:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
+}
+
+.afmeting-option3 {
+    height: 30%;
+}
+
+.afmeting-option3:hover {
+    cursor: pointer;
+    border: solid 1px var(--color1);
+}
+
+.acquisition {
+    grid-area: 3 / 4 / 4 / 5;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 60% 5% 20%;
+    grid-template-areas: 
+        "acquisitionTitle"
+        "acquisition-possibilities"
+        "."
+        "button1";
+}
+
+.button1 {
+    width: 80%;
+}
+
+.button1:hover {
+    cursor: pointer;
+}
+
 }
 /* ------------------- MOBILE ----------------------- */
 @media screen and (min-width:350px) and (max-width:1180px) {
     
     .grid-container {
         width: 475px;
-        height: auto;
+        /* height: auto; */
+        margin-left: 2vw;
+        padding-right: 2vw;
         grid-template-columns: 100%;
-        grid-template-rows: 4% 4% 92%;
+        grid-template-rows: 3% 3% 94%;
         grid-template-areas: 
             "header"
             "header"
@@ -452,14 +498,29 @@
     }
 
     .nav {
-        grid-template-columns: 35% 25% 25% 15%;
+        grid-template-columns: 30% 25% 20% 25%;
         grid-template-rows: 100%;
-        margin-top: 3vh;
+        margin-top: 1vh;
+    }
+  
+    .search { 
+        grid-area: search;
+        border: solid 3px var(--color1);
+        font-size: 14px;
+        align-self: center;
+        background: url(./images/search-icon.svg) no-repeat scroll 90vw 2px;
+        background-color: var(--color2);
+    }
+    
+    .search-input {
+        padding: 10px;
+        border: none;
+        background-color: transparent;
     }
 
     .main {
         grid-template-columns: 100%;
-        grid-template-rows: 10% 10% 10% 10% 10% 20% 10% 30%;
+        grid-template-rows: auto;
         grid-template-areas: 
             "img1"
             "bronden"
@@ -472,4 +533,141 @@
             ;
     }
 
+    .bronden {
+        grid-area: bronden;
+        grid-area: 2 / 1 / 3 / 2;
+        margin-top: 2vh;
+        margin-left: 3vw;
+        margin-bottom: 2vh;
+    }
+
+    .title-item {
+        font-size: 36px;
+    }
+
+    .img1 {
+        grid-area: img1;
+    }
+
+    .image1 {
+        object-fit: cover;
+        width: 475px;
+        height: 220px;
+        zoom: 100%;
+        object-position: -10px -60px;
+    }
+
+    .img2 {
+        grid-area: img2;
+        grid-area: 3 / 1 / 4 / 2;
+        width: 465px;
+        height: 260px;
+        overflow: hidden;
+        margin-bottom: 1vh;
+    }
+    
+    .image2 {
+        object-fit: cover;
+        zoom: 53.5%;
+        object-position: 0px -270px;
+    }
+
+    .img3 {
+        grid-area: img3;
+        grid-area: 4 / 1 / 5 / 2;
+        width: 465px;
+        height: 260px;
+        overflow: hidden;
+        margin-bottom: 2vh;
+    }
+    
+    .image3 {  
+        object-fit: cover;
+        zoom: 59.5%;
+        object-position: 0px 0px;
+    }
+
+    .description {
+        grid-area: description;
+        grid-area: 5 / 1 / 6 / 2;
+        font-size: 20px;
+        margin-bottom: 2vh;
+    }
+
+    .soort {
+        grid-area: soort;
+        grid-area: 6 / 1 / 7 / 2;
+        grid-template-rows: 15% 45% 20% 20%;
+        border-top: solid 1px var(--color3);
+        padding-top: 2vh;
+    }
+
+    .options {
+        height: 100px;
+        margin-bottom: 8vh;
+    }
+
+    .afmetingen {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "option1 option2 option3"
+        ;
+        width: 320px;
+        margin-bottom: 2vh;
+    }
+
+    .afmeting-option1 {
+        grid-area: option1;
+        height: 60%;
+        width: 100px;
+    }
+
+    .afmeting-option2 {
+        grid-area: option2;
+        height: 60%;
+        width: 100px;
+    }
+
+    .afmeting-option3 {
+        grid-area: option3;
+        height: 60%;
+        width: 100px;
+    }
+
+    .product {
+        grid-area: product;
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    .acquisition {
+        grid-area: acquisition;
+        grid-area: 8 / 1 / 9 / 2;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "Title"
+            "possible" 
+            "button"
+        ;
+    }
+
+    .acquisitionTitle {
+        grid-area: Title;
+        height: 30px;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .acquisition-possibilities {
+        grid-area: possible;
+        height: 200px;
+        margin-bottom: 1vh;
+    }
+
+    .button1 {
+        grid-area: button;
+        height: 60px;
+    }
+    
 }
